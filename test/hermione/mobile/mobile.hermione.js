@@ -1,5 +1,4 @@
 const { assert } = require("chai");
-
 function delay(time) {
   return new Promise(function (resolve) {
     setTimeout(resolve, time);

@@ -32,7 +32,7 @@ describe("Запуск страниц сайта магазина", async functi
   // Если нет товаров в магазине, то это фатальная ошибка
   it("Запуск каталога товаров. Проверка по наличию карточки товара", async function () {
     await this.browser.url("http://localhost:3000/hw/store/catalog");
-    await this.browser.assertView("plain", "[data-testid='0']", {
+    await this.browser.assertView("plain", ".ProductItem", {
       ignoreElements: ["Image.card-img-top", ".ProductItem-Name.card-title", ".ProductItem-Price.card-text"],
     });
 

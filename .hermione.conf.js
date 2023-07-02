@@ -1,7 +1,7 @@
 module.exports = {
   sets: {
     desktop: {
-      files: ["test/hermione/common.hermione.js"],
+      files: ["test/hermione/common.hermione.js", "test/hermione/cart.herione.js"],
       browsers: ["chromeDesktop"],
     },
     tablet: {

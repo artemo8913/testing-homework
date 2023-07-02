@@ -1,13 +1,18 @@
+import React from "react";
 import { it, expect } from "@jest/globals";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import { Provider } from "react-redux";
 
-import events from "@testing-library/user-event";
 import { initStore } from "../../src/client/store";
 import { Application } from "../../src/client/Application";
 import { CartApi, ExampleApi } from "../../src/client/api";
-import React from "react";
+
+function delay(time: number) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, time);
+  });
+}
 
 describe("Проверка работы приложения", () => {
   it("ссылки в шапке в наличии", async () => {
