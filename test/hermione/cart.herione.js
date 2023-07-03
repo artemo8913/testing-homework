@@ -25,6 +25,7 @@ describe("Корзина", function () {
     assert.equal(title, "Catalog");
     await browser.$(".card-link").click();
     await delay(1000);
+    await browser.assertView("addToCart_btn", ".ProductDetails-AddToCart");
     await browser.$(".ProductDetails-AddToCart").click();
     await browser.url("http://localhost:3000/hw/store/cart");
     await browser.assertView("fullfield_cart", "body", {
